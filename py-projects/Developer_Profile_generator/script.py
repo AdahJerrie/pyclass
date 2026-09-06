@@ -3,7 +3,7 @@ age = int(input("How old are you? "))
 country = input("what country do you reside? ")
 experirence = int(input("How many years of experience do you have? "))
 language = input("what is your favourite programming language? ")
-current_language = bool(input("are you currently learning python? "))
+current_language = input("are you currently learning python? ")
 
 print("===============================")
 print("DEVELOPER PROFILE")
