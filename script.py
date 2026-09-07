@@ -1,3 +1,16 @@
+# Engineering logic before language
+# To "engineer" logic means to plan it carefully, just as an engineer plans a bridge before pouring concrete.
+
+# Before you write any code, you should be able to answer these questions:
+
+# What is the goal?
+# What are the inputs?
+# What are the outputs?
+# What are the main steps?
+# What decisions must be made?
+# What can go wrong?
+# What should happen when something goes wrong?
+
 # Day1
 #variables
 # Python is object-oriented and dynamically typed.
@@ -56,3 +69,27 @@ print(f"Next year you will be {age + 1}.")
 # The for loop
 for r in range(6):
     print("Jerrie")
+
+# for python you can give a start and stop range.
+for r in range(2,6):
+    print(r)
+
+# you can also determine the step, that is what happens per loop.
+
+for r in range(2, 10, 3):
+    print(r)
+
+# range(start, stop, step)
+name = "Jerrie"
+for char in name:
+    print(char)
+
+# The while loop
+
+# A while loop keeps running while a condition remains true.
+
+count = 1
+
+while count <= 5:
+    print(count)
+    count = count + 1
