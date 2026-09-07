@@ -52,3 +52,27 @@ age = int(input("How old are you? "))
 print(f"Hello, {name}!")
 print(f"You are {age} years old.")
 print(f"Next year you will be {age + 1}.")
+
+# NB: Before worrying about syntax, learn to think:
+# What should the program DO?
+#         ↓
+# What decisions does it need to make?
+#         ↓
+# What data does it need?
+#         ↓
+# How do I express that in Python?
+
+# THE CONDITIONAL STATEMENT
+# if condition: This determines whether the code block will run or not. If the condition is True, the code block runs. If it is False, the code block does not run.
+# else: This is optional. It runs a code block if the condition is False.
+# elif: This is also optional. It allows you to check multiple conditions. If the first condition is False, it checks the next one, and so on.
+
+# NESTED CONDITIONALS
+# Nested if: This is when you have an if statement inside another if statement. It allows you to check multiple conditions in a more complex way.
+
+# 7. Truthiness
+# Python allows us to use values directly as conditions.
+name = "Jerrie"
+
+if name:
+    print("Name was provided.")
