@@ -1,3 +1,4 @@
+# Exercise 1
 number = int(input("Enter a number: "))
 
 if number % 2 == 0:
@@ -25,3 +26,5 @@ for i in range(1,11):
     result = number3 * i 
     print(f"{number3} * {i} = {result}")
 
+
+# while True: creates an infinite loop that runs forever until you manually force it to stop using a break statement inside the loop.
