@@ -95,3 +95,5 @@ while count <= 5:
     count = count + 1
 
 # we have the for loop and the while loop.
+
+# while True: creates an infinite loop that runs forever until you manually force it to stop using a break statement inside the loop.
