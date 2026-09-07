@@ -52,3 +52,7 @@ age = int(input("How old are you? "))
 print(f"Hello, {name}!")
 print(f"You are {age} years old.")
 print(f"Next year you will be {age + 1}.")
+
+# The for loop
+for r in range(6):
+    print("Jerrie")
