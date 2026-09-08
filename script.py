@@ -120,3 +120,16 @@ while count <= 5:
 # we have the for loop and the while loop.
 
 # while True: creates an infinite loop that runs forever until you manually force it to stop using a break statement inside the loop.
+
+# PRINT vs RETURN
+# The mental model
+
+# print():
+
+# "Show this to the user."
+
+# return:
+
+# "Give this value back to whoever called me."
+
+# That's a distinction you'll use constantly in Python.
