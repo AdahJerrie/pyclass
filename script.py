@@ -133,3 +133,10 @@ while count <= 5:
 # "Give this value back to whoever called me."
 
 # That's a distinction you'll use constantly in Python.
+
+# Return also ends the function
+def check_number(number):
+    if number > 0:
+        return "Positive"
+
+    return "Not positive"
