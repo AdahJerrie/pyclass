@@ -172,3 +172,8 @@ for language in languages:
 # coordinates = (10, 20)
 
 # But tuples are immutable.
+
+# List can change, tuple cannot.
+
+# List = ordered sequence
+# Set = collection of unique values
