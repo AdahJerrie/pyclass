@@ -177,3 +177,9 @@ for language in languages:
 
 # List = ordered sequence
 # Set = collection of unique values
+
+# Dictionaries
+
+# This is one of the most important Python data structures, especially for AI engineering and APIs.
+
+# A dictionary stores key/value pairs.
