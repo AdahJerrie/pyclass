@@ -201,3 +201,16 @@ developer = {
 # Access a value using its key:
 
 print(developer["name"])
+
+# Dictionary membership
+
+# This:
+
+# "name" in developer
+
+# checks whether "name" is a key.
+
+# It does not check the values.
+
+if "language" in developer:
+    print("Language exists")
