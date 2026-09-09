@@ -164,3 +164,11 @@ languages = ["Python", "Go", "Rust"]
 
 for language in languages:
     print(language)
+
+# Tuples
+
+# A tuple looks similar to a list:
+
+# coordinates = (10, 20)
+
+# But tuples are immutable.
