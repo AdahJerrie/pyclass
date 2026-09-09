@@ -146,8 +146,8 @@ def check_number(number):
 
 # A list stores multiple values in a particular order.
 
-# languages = ["Python", "Go", "JavaScript"]
+languages = ["Python", "Go", "JavaScript"]
 
 # You can access individual items using an index.
 
-# print(languages[0])
+print(languages[0])
