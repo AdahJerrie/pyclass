@@ -183,3 +183,21 @@ for language in languages:
 # This is one of the most important Python data structures, especially for AI engineering and APIs.
 
 # A dictionary stores key/value pairs.
+
+developer = {
+    "name": "Jerrie",
+    "age": 25,
+    "language": "Python"
+}
+
+# Think of it like:
+
+# key          value
+# ──────────────────────
+# "name"    → "Jerrie"
+# "age"     → 25
+# "language" → "Python"
+
+# Access a value using its key:
+
+print(developer["name"])
