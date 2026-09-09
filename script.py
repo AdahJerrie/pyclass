@@ -151,3 +151,7 @@ languages = ["Python", "Go", "JavaScript"]
 # You can access individual items using an index.
 
 print(languages[0])
+
+# 2. Lists are mutable
+
+# Mutable means you can change the collection after creating it.
