@@ -155,3 +155,12 @@ print(languages[0])
 # 2. Lists are mutable
 
 # Mutable means you can change the collection after creating it.
+
+# 6. Looping through lists
+
+# This is where your Day 2 for loop becomes very useful.
+
+languages = ["Python", "Go", "Rust"]
+
+for language in languages:
+    print(language)
