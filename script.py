@@ -140,3 +140,14 @@ def check_number(number):
         return "Positive"
 
     return "Not positive"
+
+# week1 day4
+# 1. Lists — your most commonly used collection
+
+# A list stores multiple values in a particular order.
+
+# languages = ["Python", "Go", "JavaScript"]
+
+# You can access individual items using an index.
+
+# print(languages[0])
