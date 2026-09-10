@@ -214,3 +214,56 @@ print(developer["name"])
 
 if "language" in developer:
     print("Language exists")
+
+# Choosing the right collection
+
+# This is more important than memorizing methods.
+
+# Type	Use when...
+# list	You need an ordered collection that can change
+# tuple	You need an ordered collection that shouldn't change
+# set	You need unique values
+# dict	You need key → value relationships
+
+List Comprehensions
+
+You've already written loops like this:
+
+numbers = [1, 2, 3, 4, 5]
+
+squares = []
+
+for number in numbers:
+    squares.append(number ** 2)
+
+print(squares)
+
+Output:
+
+[1, 4, 9, 16, 25]
+
+This is perfectly valid.
+
+# But Python gives us a more compact way to express the same idea:
+
+numbers = [1, 2, 3, 4, 5]
+
+squares = [number ** 2 for number in numbers]
+
+print(squares)
+
+# This is a list comprehension.
+
+# The pattern
+
+# Think of it as:
+
+# [new_value for item in collection]
+
+# So:
+
+# [number ** 2 for number in numbers]
+
+# means:
+
+# "Create a new list containing number ** 2 for every number in numbers."
