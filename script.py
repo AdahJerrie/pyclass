@@ -267,3 +267,21 @@ print(squares)
 # means:
 
 # "Create a new list containing number ** 2 for every number in numbers."
+
+try:
+    first_input = input("Enter the first number: ")
+    num1 = int(first_input)
+    
+    second_input = input("Enter the second number: ")
+    num2 = int(second_input)
+    
+    result = num1 / num2
+except ValueError:
+    print("Invalid number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print(f"Result: {result}")
+finally:
+    print("Calculation finished.")
+
