@@ -225,9 +225,9 @@ if "language" in developer:
 # set	You need unique values
 # dict	You need key → value relationships
 
-List Comprehensions
+# List Comprehensions
 
-You've already written loops like this:
+# You've already written loops like this:
 
 numbers = [1, 2, 3, 4, 5]
 
@@ -238,11 +238,11 @@ for number in numbers:
 
 print(squares)
 
-Output:
+# Output:
 
 [1, 4, 9, 16, 25]
 
-This is perfectly valid.
+# This is perfectly valid.
 
 # But Python gives us a more compact way to express the same idea:
 
