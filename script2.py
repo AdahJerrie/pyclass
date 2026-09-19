@@ -7,7 +7,7 @@ def is_numeric(val):
 
     numbers = ["10", "20", "hello", "30", "world", "40"]
 
-    vald_numbers = [int(num) for number in numbers if is_numeric]
+    vald_numbers = [int(num) for number in numbers if is_numeric(number)]
     print("valid numbers:", vald_numbers)
 
     squares = [num**2 for num in vald_numbers]
@@ -41,3 +41,26 @@ elif x % 5 == 0:
     print(f"this is a multiple of 5: ", x) 
 else:
     print(f"this is not a multiple of 3 or 5: ", x)
+
+# 3. write a python program to find the root of a quadratic equation. Before finding the roots, tell the user the number of roots to expect. If the roots are complex roots, tell the user that the equation has no roots(leave this)
+
+if __name__ == "__main__":
+    import math
+
+    a = float(input("Enter coefficient a: "))
+    b = float(input("Enter coefficient b: "))
+    c = float(input("Enter coefficient c: "))
+
+    discriminant = b**2 - 4*a*c
+
+    if discriminant > 0:
+        print("The equation has two real roots.")
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        print(f"The roots are: {root1} and {root2}")
+    elif discriminant == 0:
+        print("The equation has one real root.")
+        root = -b / (2*a)
+        print(f"The root is: {root}")
+    else:
+        print("The equation has no real roots.")
