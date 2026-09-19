@@ -39,3 +39,5 @@ elif x % 3 == 0:
 
 elif x % 5 == 0:
     print(f"this is a multiple of 5: ", x) 
+else:
+    print(f"this is not a multiple of 3 or 5: ", x)
