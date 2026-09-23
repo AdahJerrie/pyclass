@@ -24,3 +24,10 @@ if age >= 18 and has_id:
     print("access granted")
 else:
     print("access denied")
+
+day = "tuesday"
+
+if day == "saturday" or day == "sunday":
+    print("weekend")
+else:
+    print("weekday")   
