@@ -82,5 +82,20 @@ if name:
     print(f"welcome {name}!")
 
 # ------------------------------------------------------------------------------------------------
-for char in name:
-    print(char)
+# for char in name:
+#     print(char)
+# -----------------------------------------------------------------------------------------------
+# for number in range(1,21):
+#     if number % 2 == 0:
+#         # print("even")
+#     else:
+#         # print("odd")
+# ------------------------------------------------------------------------------------------------
+password = "python123"
+
+
+while password not "python3":
+    password = input("Enter password: ")
+
+
+    
