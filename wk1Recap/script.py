@@ -32,7 +32,7 @@ if day == "saturday" or day == "sunday":
 else:
     print("weekday")   
 # --------------------------------------------------------------------------------------------------------
-# Nested conditionals
+
 age >= 18
 has_cv = True
 qualified = age and has_cv
@@ -76,7 +76,11 @@ if age <= 30:
 else:
     print("you are too old")
 # ------------------------------------------------------------------------------------------------
-name = input("enter your name: ")
+name = "Jeremiah"
 
 if name:
     print(f"welcome {name}!")
+
+# ------------------------------------------------------------------------------------------------
+for char in name:
+    print(char)
