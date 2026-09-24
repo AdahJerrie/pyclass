@@ -127,12 +127,17 @@ assert changed["tags"] == ["python", "testing"]
 # 4. 
 def summarise_amounts(raw_values):
     total = 0
+    rejected = 0
     for raw in raw_values:
         try:
-            total += int(raw)
-        except:
-            pass
-    return {"total": total, "rejected": 0}
+            amount += int(raw)
+        except ValueError:
+            rejected += 1
+        if int(raw) < 0:
+            rejected += 1
+    return {"total": total, "rejected": rejected}
+
+result = summarise_amounts(["10", " 5 ", "bad", "-3", "0", ""])
 # ----------------------------------------------------------------------------------------------------------------------------
 def is_palindrome(word):
     return word == word[::-1]
