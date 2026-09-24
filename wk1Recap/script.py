@@ -130,15 +130,46 @@ def summarise_amounts(raw_values):
     rejected = 0
     for raw in raw_values:
         try:
-            amount += int(raw)
+            amount = int(raw)
         except ValueError:
             rejected += 1
-        if int(raw) < 0:
+            continue
+        if amount < 0:
             rejected += 1
+        else:
+            total += amount
     return {"total": total, "rejected": rejected}
 
 result = summarise_amounts(["10", " 5 ", "bad", "-3", "0", ""])
+print (result)
+
+assert summarise_amounts([]) == {"total": 0, "rejected": 0}
+assert summarise_amounts(["0", "5", "9"]) == {"total": 14, "rejected": 0}
+assert summarise_amounts(["new", "-5", "-3"]) == {"total": 0, "rejected": 3}
 # ----------------------------------------------------------------------------------------------------------------------------
+# # Return a new dictionary containing every stock key with its remaining quantity. Never modify stock or order, including when a request fails.
+# An item may occur more than once in order. Its combined requested quantity must be reserved. Never allow a negative remaining quantity.
+# Raise ValueError for an unknown item, a quantity of zero or less, or insufficient stock. Error message wording is your choice. An empty order returns an equal but separate dictionary.
+# You may use try/except with an assertion that fails if ValueError is not raised. Tests must call the function and check a result or failure, not just print it.
+# 5. 
+def reserve_stock(stock, order):
+    remaining = stock.copy()
+    for item, quantity in order:
+        try:
+            if item not in stock:
+                raise ValueError("item not available")
+            if quantity <= 0:
+                raise ValueError("quantity must be greater than zero")
+            if item in order > 1:
+                raise ValueError("item already in order")
+            if quantity > stock[item]:
+                raise ValueError("insufficient stock")
+            else:
+                remaining[item] = quantity
+        except ValueError as e:
+            print(f"Error: {e}")
+    return remaining
+# --------------------------------------------------------------------------------------------------------------------------------
 def is_palindrome(word):
     return word == word[::-1]
 
