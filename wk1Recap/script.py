@@ -85,17 +85,17 @@ if name:
 # for char in name:
 #     print(char)
 # -----------------------------------------------------------------------------------------------
-# for number in range(1,21):
-#     if number % 2 == 0:
-#         # print("even")
-#     else:
-#         # print("odd")
+for number in range(1,21):
+    if number % 2 == 0:
+        print(number, "- even")
+    else:
+        print(number, "- odd")
 # ------------------------------------------------------------------------------------------------
-password = "python123"
+# password = "python123"
 
 
-while password not "python3":
-    password = input("Enter password: ")
+# while password not "python3":
+#     password = input("Enter password: ")
 
 
     
