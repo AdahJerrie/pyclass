@@ -38,3 +38,18 @@ three_check = 3 in unique_numbers
 # Dictionaries 🗂️Create a dictionary representing a developer profile:developer = { "name": "Jerrie", "age": 25, "language": "Go", "is_learning_python": True}Your tasksPrint the developer's name.Print their age.Print their programming language.Change "language" from "Go" to "Python".Add a new key:"experience": 2Check whether "age" exists in the dictionary.Loop through the dictionary and print each key and value.ChallengeWithout running the code first, predict what this will produce:print(developer["country"])
 developer = {"name": "Jerrie", "age": "25", "language": "Go", "is_learning_python": True}
 print(developer["name"])
+print(developer["age"])
+print(developer["language"])
+developer["language"] = "python"
+print(developer["language"])
+developer["experience"] = 2
+print(developer["experience"])
+print(developer)
+
+
+two_check = "age" in developer
+print(two_check)
+
+for key, value in developer.items():
+    print(f"{key}: {value}")
+
