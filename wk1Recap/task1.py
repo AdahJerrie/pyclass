@@ -4,12 +4,37 @@ def ListsCreate(language):
     return language
 
 ListsCreates = ListsCreate(["java", "Go", "python", "Rust", "JS"])
-print(ListsCreates[0])
-print(ListsCreates[-1])
-ListsCreates.append("Express")
-print(ListsCreates)
-ListsCreates.remove("java")
-print(ListsCreates)
-print(len(ListsCreates))
-for lang in ListsCreates:
-    print(f"programming language: ", lang)
+# print(ListsCreates[0])
+# print(ListsCreates[-1])
+# ListsCreates.append("Express")
+# print(ListsCreates)
+# ListsCreates.remove("java")
+# print(ListsCreates)
+# print(len(ListsCreates))
+# for lang in ListsCreates:
+#     print(f"programming language: ", lang)
+# -----------------------------------------------------------------------------------------------------------------------------------
+set()
+# Now let's see whether you understand why we'd choose something other than a list.Part A — TupleCreate a tuple representing a coordinate:x = 10y = 20Then:Print the first coordinate.Print the second coordinate.Try changing the first coordinate to 50.Before you run it, predict what will happen when you try to change it.Part B — SetCreate this list:numbers = [1, 2, 2, 3, 3, 3, 4, 5, 5]Then:Convert it to a set.Print the set.Explain why the duplicate numbers disappeared.Check whether 3 exists in the set.
+
+coordinate = (10, 20)
+# print(coordinate[0])
+# print(coordinate[1])
+# # try:
+#     coordinate[0] = 50
+# except TypeError as e:
+#     # print(e)
+
+numbers = [1, 2, 2, 3, 3, 3, 4, 5, 5]
+# convert the list to a set
+unique_numbers = set(numbers)
+# print(unique_numbers)
+
+three_check = 3 in unique_numbers
+# print(three_check)
+# when you pass a list to set(), python automatically filters out any repeating values, keeping only one instance of each.
+# ---------------------------------------------------------------------------------------------------------------------------------
+# dictionaries
+# Dictionaries 🗂️Create a dictionary representing a developer profile:developer = { "name": "Jerrie", "age": 25, "language": "Go", "is_learning_python": True}Your tasksPrint the developer's name.Print their age.Print their programming language.Change "language" from "Go" to "Python".Add a new key:"experience": 2Check whether "age" exists in the dictionary.Loop through the dictionary and print each key and value.ChallengeWithout running the code first, predict what this will produce:print(developer["country"])
+developer = {"name": "Jerrie", "age": "25", "language": "Go", "is_learning_python": True}
+print(developer["name"])
