@@ -13,6 +13,7 @@ ListsCreates = ListsCreate(["java", "Go", "python", "Rust", "JS"])
 # print(len(ListsCreates))
 # for lang in ListsCreates:
 #     print(f"programming language: ", lang)
+
 # -----------------------------------------------------------------------------------------------------------------------------------
 set()
 # Now let's see whether you understand why we'd choose something other than a list.Part A — TupleCreate a tuple representing a coordinate:x = 10y = 20Then:Print the first coordinate.Print the second coordinate.Try changing the first coordinate to 50.Before you run it, predict what will happen when you try to change it.Part B — SetCreate this list:numbers = [1, 2, 2, 3, 3, 3, 4, 5, 5]Then:Convert it to a set.Print the set.Explain why the duplicate numbers disappeared.Check whether 3 exists in the set.
