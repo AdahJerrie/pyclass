@@ -84,7 +84,6 @@ if name:
 # ------------------------------------------------------------------------------------------------
 # for char in name:
 #     print(char)
-<<<<<<< HEAD
 # -------------------------------------------------------------------------------------------------
 # assessment solvings
 # 1a. 
@@ -174,7 +173,6 @@ def reserve_stock(stock, order):
 def is_palindrome(word):
     return word == word[::-1]
 
-=======
 # -----------------------------------------------------------------------------------------------
 for number in range(1,21):
     if number % 2 == 0:
@@ -182,12 +180,11 @@ for number in range(1,21):
     else:
         print(number, "- odd")
 # ------------------------------------------------------------------------------------------------
-# password = "python123"
+password = ""
 
-
-# while password not "python3":
-#     password = input("Enter password: ")
-
+while password != "python3":
+    password = input("Enter password: ")
+    if password == "python3":
+        print("Access granted")
 
     
->>>>>>> e30fd7fd9d12438b81cc214d95d29f56d067a4be
