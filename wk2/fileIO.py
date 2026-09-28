@@ -1,22 +1,30 @@
 # reading from a file
-file = open("note.txt", "r")
+# file = open("note.txt", "r")
 
-content = file.read()
+# content = file.read()
 
-# print(content)
+# # print(content)
 
-file.close()
+# file.close()
 
 # now this is shortened with python
 with open("note.txt", "r") as file:
     content = file.read()
-
-# print(content )
+print("--- My Notes ---")
+print(content )
 
 # writing to a file
-# with open("preview.txt", "w") as file:
-#     file.write("report received and safely stored")
+user_name = input("enter name:\t")
+fav_programming_language = input("Enter favourite programming language:\t")
+yrs_of_experience = input("enter years of programming experience:\t")
+
+with open("developer.txt", "w") as file:
+    file.write("developer profile\n")
+    file.write(f"name: {user_name}\n")
+    file.write(f"Favorite language: {fav_programming_language}\n")
+    file.write(f"Experience: {yrs_of_experience} years\n")
 
 # Appending (a)
-with open("preview.txt", "a") as file:
-    file.write("\nretrieve with the command")
+new_skill = input("Enter a new skill:\t")
+with open("developer.txt", "a") as file:
+    file.write(f"new skill: {new_skill}\n")
