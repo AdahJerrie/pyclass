@@ -1,1 +1,2 @@
 report received and safely stored
+retrieve with the command

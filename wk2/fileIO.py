@@ -3,7 +3,7 @@ file = open("note.txt", "r")
 
 content = file.read()
 
-print(content)
+# print(content)
 
 file.close()
 
@@ -11,8 +11,12 @@ file.close()
 with open("note.txt", "r") as file:
     content = file.read()
 
-print(content )
+# print(content )
 
 # writing to a file
-with open("preview.txt", "w") as file:
-    file.write("report received and safely stored")
+# with open("preview.txt", "w") as file:
+#     file.write("report received and safely stored")
+
+# Appending (a)
+with open("preview.txt", "a") as file:
+    file.write("\nretrieve with the command")
