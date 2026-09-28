@@ -65,17 +65,36 @@ developer = {
      "name": "Jerrie", 
      "experience": 2
 }
-coordinates = (6.5244, 3.3792)
+# coordinates = (6.5244, 3.3792)
+# # print(languages)
+# languages.append("Rust")
 # print(languages)
-languages.append("Rust")
-print(languages)
 
-# convert to set
-unique_languages = set(languages)
-print(unique_languages)
-# tuple
-print(coordinates[0])
-print(coordinates[1])
+# # convert to set
+# unique_languages = set(languages)
+# print(unique_languages)
+# # tuple
+# print(coordinates[0])
+# print(coordinates[1])
 
-developer["languages"] = unique_languages
-print(developer)
+# developer["languages"] = unique_languages
+# print(developer)
+# -------------------------------------------------------------------------------------------------------------------
+# Given:numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]Create a new list called squares containing the square of every number.RequirementYou must use a list comprehension.Expected result:[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]BonusCreate another list called even_numbers containing only the even numbers using a list comprehension.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = [num **2 for num in numbers]
+# print(squares)
+even_numbers = [nums for nums in numbers if nums % 2 == 0]
+# print(even_numbers)
+# ------------------------------------------------------------------------------------------------------------------------
+# Part A — Set comprehensionCreate a set called unique_squares containing the squares of the numbers.You must use a set comprehension.Because the input contains duplicates, your result should contain each square only once.Part B — Dictionary comprehensionUsing the same numbers list, create a dictionary called number_squares where:the key is the numberthe value is its squareConceptually:1 → 12 → 43 → 94 → 165 → 25You must use a dictionary comprehension.
+unique_squares = {num **2 for num in numbers}
+# print(unique_squares)
+number_squares = {num: num **2 for num in numbers}
+# print(number_squares)
+# -----------------------------------------------------------------------------------------------------------------------------
+num = input("Enter a number: ")
+# try:
+    # print(int(num))
+# except ValueError:
+    # print("invalid number")
