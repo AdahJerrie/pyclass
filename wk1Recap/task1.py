@@ -129,3 +129,17 @@ def divide(a, b):
 # print(divide(10, 2))
 # print(divide(10, 0))
 # ------------------------------------------------------------------------------------------------------------------
+numbers = ["10", "20", "hello", "30", "world", "40"]
+valid_strings = []
+for num in numbers:
+    try:
+        valid_strings.append(int(num))
+    except ValueError:
+        print("")
+
+print(valid_strings)
+
+# try:
+#     num_conv = [int(num) for num in numbers]
+# except ValueError:
+#     print(None)
