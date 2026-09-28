@@ -93,8 +93,27 @@ unique_squares = {num **2 for num in numbers}
 number_squares = {num: num **2 for num in numbers}
 # print(number_squares)
 # -----------------------------------------------------------------------------------------------------------------------------
-num = input("Enter a number: ")
+# num = input("Enter a number: ")
 # try:
     # print(int(num))
 # except ValueError:
     # print("invalid number")
+# ----------------------------------------------------------------------------------------------------------------------------
+first_number = input("Enter first number:\t")
+second_number = input("Enter second number:\t")
+
+# try:
+    # num1 = int(first_number)
+
+    # num2 = int(second_number)
+
+    # result = num1 / num2
+
+# except ValueError:
+#     print("invalid number")
+# except ZeroDivisionError:
+#     print("cannot divide by zero")
+# else:
+#     print(result)
+# finally:
+#     print("calculation finished")
