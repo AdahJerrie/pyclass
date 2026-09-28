@@ -99,8 +99,8 @@ number_squares = {num: num **2 for num in numbers}
 # except ValueError:
     # print("invalid number")
 # ----------------------------------------------------------------------------------------------------------------------------
-first_number = input("Enter first number:\t")
-second_number = input("Enter second number:\t")
+# first_number = input("Enter first number:\t")
+# second_number = input("Enter second number:\t")
 
 # try:
     # num1 = int(first_number)
@@ -117,3 +117,15 @@ second_number = input("Enter second number:\t")
 #     print(result)
 # finally:
 #     print("calculation finished")
+# -----------------------------------------------------------------------------------------------------------------
+def divide(a, b):
+    try:
+        division = a / b
+    except ZeroDivisionError:
+        return None
+    else: 
+        return division
+    
+# print(divide(10, 2))
+# print(divide(10, 0))
+# ------------------------------------------------------------------------------------------------------------------
