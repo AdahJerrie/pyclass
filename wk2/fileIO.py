@@ -28,3 +28,8 @@ with open("developer.txt", "w") as file:
 new_skill = input("Enter a new skill:\t")
 with open("developer.txt", "a") as file:
     file.write(f"new skill: {new_skill}\n")
+
+# Read the file line by line
+with open("developer.txt", "r") as file:
+    for line in file:
+        print(line.strip())

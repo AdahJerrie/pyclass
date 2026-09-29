@@ -1,3 +1,5 @@
-Learn Python
-Practice Python
-Build Python projects
+=== Notes Manager ===
+today is a great day=== Notes Manager ===
+let the journey begin
+=== Notes Manager ===
+ted talk
