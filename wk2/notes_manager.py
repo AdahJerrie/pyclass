@@ -1,9 +1,4 @@
-
-# print("=== Notes Manager ===")
-
-# print("1. Add a note")
-# print("2. View notes")
-# print("3. Exit\n")
+import os
 
 while True:
     print("=== Notes Manager ===")
@@ -24,9 +19,12 @@ while True:
             file.write(f"{input_note}\n")
     
     elif selected_option == 2:
-        with open("note.txt", "r") as file:
-            for line in file:
-                print(line.strip())
+        if not os.path.exists("note.txt"):
+            print("No notes found")
+        else:
+            with open("note.txt", "r") as file:
+                for line in file:
+                    print(line.strip())
             
     elif selected_option == 3:
         print("Goodbye")
@@ -34,15 +32,3 @@ while True:
     else:
         if selected_option > 3:
             print(f"{selected_option} is not a valid option")
-
-
-# take_note = input("Add a note:\t")
-# with open("note.txt", "a") as file:
-#     file.write("=== Notes Manager ===\n")
-#     file.write(f"{take_note}\n")
-
-# with open("note.txt", "r") as file:
-#     for line in file:
-#         print(f"{line}\n")
-
-# print("Goodbye")
