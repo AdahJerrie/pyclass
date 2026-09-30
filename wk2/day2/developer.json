@@ -1,5 +1,11 @@
 {
-  "name": "Jerrie",
-  "age": 25,
-  "language": "Python"
+    "name": "Jerrie",
+    "age": 25,
+    "language": "Python",
+    "is_learning": true,
+    "skills": [
+        "Python",
+        "Go",
+        "FastAPI"
+    ]
 }
