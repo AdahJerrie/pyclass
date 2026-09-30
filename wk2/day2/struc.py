@@ -33,3 +33,17 @@ developers = {
 
 with open("developer.json", "w") as file:
     json.dump(developers, file, indent=2)
+
+
+# json file to python object
+
+with open("developer.json", "r") as file:
+    developer = json.load(file)
+print(developer)
+
+#                  STRING       FILE
+#               ┌───────────┬───────────┐
+# Python → JSON │  dumps()  │   dump()  │
+#               ├───────────┼───────────┤
+# JSON → Python │  loads()  │   load()  │
+#               └───────────┴───────────┘
