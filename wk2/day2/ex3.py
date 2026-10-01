@@ -14,3 +14,4 @@ with open("developer.json", "w") as file:
 
 with open("developer.json", "r") as file:
     developer_data = json.load(file)
+print(developer_data["skills"])
