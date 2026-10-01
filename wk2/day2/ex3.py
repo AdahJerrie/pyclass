@@ -8,3 +8,6 @@ skill = input("Enter your skill: ")
 
 developer["skills"].append(skill)
 # print(developer)
+
+with open("developer.json", "w") as file:
+    json.dump(developer, file, indent=4)
