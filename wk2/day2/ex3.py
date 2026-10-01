@@ -11,3 +11,6 @@ developer["skills"].append(skill)
 
 with open("developer.json", "w") as file:
     json.dump(developer, file, indent=4)
+
+with open("developer.json", "r") as file:
+    developer_data = json.load(file)
