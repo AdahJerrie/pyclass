@@ -13,7 +13,12 @@ while True:
         try:
             with open("developer.json", "r") as file:
                 developer = json.load(file)
-            print("Developer Profile:")
+            print(developer["name"])
+            print("Skills:")
+            for skill in developer["skills"]:
+                print(f"  - {skill}")
+            print("Current Project:")
+            print(f"  - {developer['projects']['current']}")
 
         except FileNotFoundError:
             print("Developer file not found.")
@@ -27,24 +32,28 @@ while True:
                 developer = json.load(file)
                 skill = input("Enter a new skill: ")
                 developer["skills"].append(skill)
+            with open("developer.json", "w") as file:
                 json.dump(developer, file, indent=4)
         except FileNotFoundError:
             print("Developer file not found.")
+        except json.JSONDecodeError:
+            print("Invalid JSON data.")
             continue
 
     elif choice == "3":
         try:
-            with open("developer.json", "w") as file:
+            with open("developer.json", "r") as file:
                 developer = json.load(file)
-                new_project = input("Enter new project: ")
-                developer["projects"]["current"] = new_project
+            new_project = input("Enter new project: ")
+            developer["projects"]["current"] = new_project
+            with open("developer.json", "w") as file:
                 json.dump(developer, file, indent=4)
         except FileNotFoundError:
             print("Developer file not found")
+        except json.JSONDecodeError:
+            print("Invalid JSON data.")
             continue
 
-    elif choice == "4":
-        print("Goodbye")
         break
     else:
         if choice > 4:
