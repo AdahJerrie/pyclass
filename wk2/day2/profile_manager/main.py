@@ -56,5 +56,5 @@ while True:
             print("Invalid JSON data.")
             continue
     else:
-        if choice > "4":
-            print(f"{choice} is not a valid option")
+       
+        print(f"{choice} is not a valid option")
