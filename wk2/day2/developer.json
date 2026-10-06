@@ -6,8 +6,10 @@
     "skills": [
         "Python",
         "Go",
-        "FastAPI",
-        "git",
-        "git"
-    ]
+        "FastAPI"
+    ],
+    "projects": {
+        "current": "dsdsd",
+        "completed": 3
+    }
 }
