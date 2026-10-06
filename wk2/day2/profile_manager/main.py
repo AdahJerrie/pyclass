@@ -53,8 +53,6 @@ while True:
         except json.JSONDecodeError:
             print("Invalid JSON data.")
             continue
-
-        break
     else:
-        if choice > 4:
+        if choice > "4":
             print(f"{choice} is not a valid option")
