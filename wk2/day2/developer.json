@@ -1,15 +1,11 @@
-{
+ {
     "name": "Jerrie",
     "age": 25,
     "language": "Python",
-    "is_learning": true,
     "skills": [
         "Python",
         "Go",
         "FastAPI"
     ],
-    "projects": {
-        "current": "dsdsd",
-        "completed": 3
-    }
+    "current_project": "AI Assistant"
 }
