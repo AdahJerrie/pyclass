@@ -14,6 +14,8 @@ while True:
             with open("developer.json", "r") as file:
                 developer = json.load(file)
             print(developer["name"])
+            print("age:", developer["age"])
+            print("language:", developer["language"])
             print("Skills:")
             for skill in developer["skills"]:
                 print(f"  - {skill}")
