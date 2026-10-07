@@ -55,6 +55,9 @@ while True:
         except json.JSONDecodeError:
             print("Invalid JSON data.")
             continue
+
+    elif choice == "4":
+        print("Exiting the program.")
+        break
     else:
-       
         print(f"{choice} is not a valid option")
