@@ -6,3 +6,5 @@
 # What is CSV?
 
 # CSV means Comma-Separated Values.
+
+# CSV, which is commonly used for tables and spreadsheets.
