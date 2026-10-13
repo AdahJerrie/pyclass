@@ -1,0 +1,11 @@
+name,skill,level
+Jerrie,Python,Beginner
+Alice,Go,Intermediate
+Bob,Javascript,Advanced
+J,e,r,r,i,e
+G,o
+B,e,g,i,n,n,e,r
+{'Jerrie'},{'Go'},{'Pro'}
+Jerrie,Go,Pro
+Jerrie,dd,dds
+Jerrie,Go,Entry
