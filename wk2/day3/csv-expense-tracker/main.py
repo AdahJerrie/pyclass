@@ -3,7 +3,7 @@ from pathlib import Path
 
 def expense_tracker():
     # define file path once at the top
-    file_exist = Path("expenses.csv")
+    file_path = Path("expenses.csv")
 
     while True:
         print("\n=== Expense Tracker ===")
@@ -18,15 +18,21 @@ def expense_tracker():
         except ValueError:
             print(f"{options} is not a valid option")
             continue
-        
-        # option1 to add expense
+    
         if selected_option == 1:
             date = input("Enter date (yy - mm - dd): ")
             category = input("Enter category (food, transport, internet): ")
-            amount = input("Enter amount: ")
+            try:
+                amount = float(input("Enter amount: "))
+                if amount <= 0:
+                    print(f"amount must be greater than zero")
+                    continue
+            except ValueError:
+                print("Invalid amount")
+                continue
 
             # check file existence before opening
-            file_exist = Path("expenses.csv").exists()
+            file_exist = file_path.exists()
 
             with open("expenses.csv", "a", newline="") as file:
                 fieldnames = ["date", "category", "amount"]
@@ -44,7 +50,7 @@ def expense_tracker():
                 print("Expense added successfully")
 
         elif selected_option == 2:
-            if not file_exist.exist():
+            if not file_path.exists():
                 print("No expenses added")
                 continue
 
@@ -59,7 +65,7 @@ def expense_tracker():
                     print(f"{date} - {category} - {amount}")
 
         elif selected_option == 3:
-            if not file_exist.exist():
+            if not file_path.exists():
                 print("No expenses recoded yet")
                 continue
 
@@ -72,13 +78,12 @@ def expense_tracker():
                         total += float(expenses["amount"])
                     except ValueError:
                         continue
-                print(total)
+                print(f"Total expenses: {total:.2f}")
 
         elif selected_option == 4:
             print("Goodbye")
             break
         else:
             print(f"{selected_option} is not a valid option")
-
 
 expense_tracker()
