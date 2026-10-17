@@ -2,5 +2,6 @@ ticket fields: id, category, urgency, affected_users, priority, status, assigned
 
 logics to write before creating ticket: create_id logic, priority logic, validate ticket input.
 
+create ticket when all necessary logic is in place.
 
 
