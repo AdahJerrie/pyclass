@@ -40,6 +40,8 @@ def validate_ticket_inputs(title, category, urgency, affected_users):
             f"Invalid urgency '{urgency}'. Allowed urgency levels : {', '.join(ALLOWED_URGENCIES)}."
         )
 
+    if isinstance(affected_users, bool):
+        raise ValueError("affected_users must be a positive integer (not boolean).")
     if isinstance(affected_users, int):
         parsed_users = affected_users
     elif isinstance(affected_users, str):
