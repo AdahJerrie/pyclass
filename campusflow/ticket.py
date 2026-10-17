@@ -56,3 +56,18 @@ def validate_ticket_inputs(title, category, urgency, affected_users):
         raise ValueError("affected_users must be a positive integer (not decimal or text).")
     if parsed_users <= 0:
         raise ValueError("affected_users must be a positive integer greater than 0.")
+
+    return cleaned_title, cleaned_category, cleaned_urgency, parsed_users
+
+
+def generate_ticket_id(tickets):
+    """Generate the next unique ticket ID (T001, T002, ...) from existing tickets."""
+    max_num = 0 
+    for ticket in tickets:
+        ticket_id = str(ticket.get("id", "")).strip().upper()
+        if ticket_id.startswith("T") and ticket_id[1:].isdigit():
+            num = int(ticket_id[1:])
+            if num > max_num:
+                max_num = num 
+    return f"T{max_num+1:03d}"
+      
