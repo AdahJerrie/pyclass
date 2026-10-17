@@ -60,7 +60,7 @@ def validate_ticket_inputs(title, category, urgency, affected_users):
     return cleaned_title, cleaned_category, cleaned_urgency, parsed_users
 
 
-def generate_ticket_id(tickets):
+def generate_next_id(tickets):
     """Generate the next unique ticket ID (T001, T002, ...) from existing tickets."""
     max_num = 0 
     for ticket in tickets:
@@ -70,4 +70,33 @@ def generate_ticket_id(tickets):
             if num > max_num:
                 max_num = num 
     return f"T{max_num+1:03d}"
-      
+
+
+def create_ticket(tickets, title, category, urgency, affected_users):
+    validate_ticket_inputs(title, category, urgency, affected_users)
+    calculate_priority(urgency, affected_users)
+    generate_next_id(tickets)
+
+    ticket = {
+       
+        "id": generate_next_id,
+        "title": validate_ticket_inputs,
+        "category": validate_ticket_inputs,
+        "urgency": validate_ticket_inputs,
+        "affected_users": validate_ticket_inputs,
+        "priority": calculate_priority,
+        "status": "open",
+        "assigned_to": None
+    }
+
+    tickets.append(ticket)
+
+    return ticket
+
+
+def list_tickets(tickets):
+    for ticket in tickets:
+        return ticket
+        return f"ID: {ticket['id']}, Title: {ticket['title']}, Category: {ticket['category']}, Urgency: {ticket['urgency']}, Affected Users: {ticket['affected_users']}, Priority: {ticket['priority']}, Status: {ticket['status']}, Assigned To: {ticket['assigned_to']}"
+
+    
