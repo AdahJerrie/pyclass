@@ -73,18 +73,21 @@ def generate_next_id(tickets):
 
 
 def create_ticket(tickets, title, category, urgency, affected_users):
-    validate_ticket_inputs(title, category, urgency, affected_users)
-    calculate_priority(urgency, affected_users)
-    generate_next_id(tickets)
+    if not tickets:
+        return "No tickets available. Please create a ticket."
+
+    ticket_id = generate_next_id(tickets)
+    cleaned_title, cleaned_category, cleaned_urgency, parsed_users = validate_ticket_inputs(title, category, urgency, affected_users)
+    priority = calculate_priority(cleaned_urgency, parsed_users)
 
     ticket = {
        
-        "id": generate_next_id,
-        "title": validate_ticket_inputs,
-        "category": validate_ticket_inputs,
-        "urgency": validate_ticket_inputs,
-        "affected_users": validate_ticket_inputs,
-        "priority": calculate_priority,
+        "id": ticket_id,
+        "title": cleaned_title,
+        "category": cleaned_category,
+        "urgency": cleaned_urgency,
+        "affected_users": parsed_users,
+        "priority": priority,
         "status": "open",
         "assigned_to": None
     }
@@ -95,8 +98,19 @@ def create_ticket(tickets, title, category, urgency, affected_users):
 
 
 def list_tickets(tickets):
-    for ticket in tickets:
-        return ticket
-        return f"ID: {ticket['id']}, Title: {ticket['title']}, Category: {ticket['category']}, Urgency: {ticket['urgency']}, Affected Users: {ticket['affected_users']}, Priority: {ticket['priority']}, Status: {ticket['status']}, Assigned To: {ticket['assigned_to']}"
+    """F2 - return a list of all tickets""" 
+    return list(tickets)
 
-    
+
+def get_ticket_by_id(tickets, ticket_id):
+    """F2b - return a ticket by its ID"""
+    if not isinstance(ticket_id, str) or not ticket_id.strip():
+        raise ValueError("ticket id must not be blank.")
+
+    normalized_id = ticket_id.strip().upper()
+
+    for ticket in tickets:
+        if str(ticket.get("id")).upper() == normalized_id:
+            return ticket
+
+    raise ValueError(f"Ticket '{normalized_id}' not found")
