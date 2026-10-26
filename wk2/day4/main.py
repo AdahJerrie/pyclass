@@ -1,7 +1,8 @@
+import datetime
+
 from tools.greetings import greet_dev
 from tools.experience import calculate_experience
 from tools.skills import format_skills
-import datetime
 
 your_name = input("Enter your name: ")
 name = greet_dev(your_name)
