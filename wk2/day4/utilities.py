@@ -1,11 +1,18 @@
-def greet_dev(name="Jerrie") -> str :
-    # name = input("Enter name: ")
-    return f"welcome, {name}!"
 
-def calculate_experience(start_yr, current_yr):
-    start_yr = int(input("Enter start year: "))
-    current_yr = int(input("Enter current year: "))
+def greet_dev(name: str) -> str :
 
-    experience = current_yr - start_yr
+    return f"Welcome, {name}!"
 
-    return experience
+def calculate_experience(start_yr: int, current_yr: int) -> int:
+
+    return current_yr - start_yr
+
+    
+
+def format_skills(skill_set: list[str]) -> str:
+
+    skill = [skill.strip() for skill in skill_set.split(",") if skill.strip()]
+
+    cleaned_skills = ", ".join(skill)
+    
+    return cleaned_skills
