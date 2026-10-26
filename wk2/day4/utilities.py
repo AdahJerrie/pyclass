@@ -11,8 +11,6 @@ def calculate_experience(start_yr: int, current_yr: int) -> int:
 
 def format_skills(skill_set: list[str]) -> str:
 
-    skill = [skill.strip() for skill in skill_set.split(",") if skill.strip()]
-
-    cleaned_skills = ", ".join(skill)
+    cleaned_skills = ", ".join(skill_set)
     
     return cleaned_skills
