@@ -14,9 +14,8 @@ current_yr = datetime.date.today().year
 experience = utilities.calculate_experience(begin_yr, current_yr)
 
 skill_set = input("Enter skills (separated by commas): ")
-skills_list = skill_set.split(",")
-skills = utilities.format_skills(skills_list)
-
+skill = [skill.strip() for skill in skill_set.split(",") if skill.strip()]
+skills = utilities.format_skills(skill)
 
 print(name)
 print(experience)
