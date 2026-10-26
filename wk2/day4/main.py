@@ -1,8 +1,10 @@
-import utilities
+from tools.greetings import greet_dev
+from tools.experience import calculate_experience
+from tools.skills import format_skills
 import datetime
 
 your_name = input("Enter your name: ")
-name = utilities.greet_dev(your_name)
+name = greet_dev(your_name)
 while True:
     try:
         begin_yr = int(input("Enter start year: "))
@@ -11,12 +13,12 @@ while True:
         print("input must be a number")
 
 current_yr = datetime.date.today().year
-experience = utilities.calculate_experience(begin_yr, current_yr)
+experience = calculate_experience(begin_yr, current_yr)
 
 skill_set = input("Enter skills (separated by commas): ")
 skill = [skill.strip() for skill in skill_set.split(",") if skill.strip()]
-skills = utilities.format_skills(skill)
+skills = format_skills(skill)
 
 print(name)
-print(experience)
-print(skills)
+print(f"Years of experience: {experience}")
+print(f"Skills: {skills}")
