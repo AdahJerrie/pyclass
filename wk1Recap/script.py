@@ -107,6 +107,7 @@ print(passing_scores([49, 50, 80, 65]))
 assert passing_scores([30, 56, 80]) == ([56, 80])
 assert passing_scores([70]) == ([70])
 assert passing_scores([]) == ([])
+# assert use conditions
 # -------------------------------------------------------------------------------------------------------------------------
 # 3.
 def add_tag(profile, tag):
