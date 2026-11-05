@@ -6,11 +6,12 @@ def expense_tracker():
     file_path = Path("expenses.csv")
 
     while True:
-        print("\n=== Expense Tracker ===")
-        print("1. Add expense")
-        print("2. View expenses")
-        print("3. Calculate total expenses")
-        print("4. Exit")
+        print("""
+            === Expense Tracker ===
+        1. Add expense
+        2. View expenses
+        3. Calculate total expenses
+        4. Exit""")
 
         options = input("select an option 1- 4: \t\n")
         try:
