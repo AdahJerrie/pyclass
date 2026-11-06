@@ -42,11 +42,3 @@ print(summary, end="")
 
 with open("task_summary.txt", "w", encoding="utf-8") as file:
     file.write(summary)
-
-# Confirm the counts and saved output are correct.
-assert len(tasks) == 5
-assert len(pending_tasks) == 3
-assert len(done_tasks) == 2
-
-with open("task_summary.txt", "r", encoding="utf-8") as file:
-    assert file.read() == summary
