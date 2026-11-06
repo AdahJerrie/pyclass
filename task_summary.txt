@@ -1,0 +1,14 @@
+TASK TRACKER SUMMARY
+====================
+Total tasks: 5
+Pending: 3
+Done: 2
+
+Pending tasks:
+- Complete Python assignment
+- Practise Python loops
+- Review dictionaries
+
+Done tasks:
+- Read course notes
+- Install Python
